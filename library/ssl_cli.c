@@ -894,7 +894,7 @@ static int ssl_write_client_hello( mbedtls_ssl_context *ssl )
     /*
      * Add TLS_EMPTY_RENEGOTIATION_INFO_SCSV
      */
-	/*
+	
 #if defined(MBEDTLS_SSL_RENEGOTIATION)
     if( ssl->renego_status == MBEDTLS_SSL_INITIAL_HANDSHAKE )
 #endif
@@ -902,7 +902,7 @@ static int ssl_write_client_hello( mbedtls_ssl_context *ssl )
         *p++ = (unsigned char)( MBEDTLS_SSL_EMPTY_RENEGOTIATION_INFO >> 8 );
         *p++ = (unsigned char)( MBEDTLS_SSL_EMPTY_RENEGOTIATION_INFO      );
         n++;
-    }*/
+    }
 
     /* Some versions of OpenSSL don't handle it correctly if not at end */
 #if defined(MBEDTLS_SSL_FALLBACK_SCSV)

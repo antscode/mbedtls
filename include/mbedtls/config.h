@@ -1165,9 +1165,9 @@
  * misuse/misunderstand.
  *
  * Comment this to disable support for renegotiation.
+ */
 
 #define MBEDTLS_SSL_RENEGOTIATION
-*/
 
 /**
  * \def MBEDTLS_SSL_SRV_SUPPORT_SSLV2_CLIENT_HELLO
@@ -1815,8 +1815,9 @@
  *          library/ssl_tls.c
  *
  * This module provides debugging functions.
- */
-//#define MBEDTLS_DEBUG_C
+
+#define MBEDTLS_DEBUG_C
+*/
 
 /**
  * \def MBEDTLS_DES_C
